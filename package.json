@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Save your aha moments right inside your computer memory",
   "main": "index.js",
+  "bin": {
+    "aha": "./bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
