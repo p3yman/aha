@@ -115,4 +115,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# Custom ignore
 package-lock.json
+data.json
