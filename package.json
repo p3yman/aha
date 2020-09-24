@@ -27,8 +27,8 @@
   "homepage": "https://github.com/p3yman/aha#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "commander": "^6.1.0",
     "jsonfile": "^6.0.1",
-    "table": "^6.0.3",
-    "yargs": "^16.0.3"
+    "table": "^6.0.3"
   }
 }
