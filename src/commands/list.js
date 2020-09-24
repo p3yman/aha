@@ -2,6 +2,7 @@
 const program = require('commander');
 const chalk = require('chalk');
 const { table } = require('table');
+const { readDataFile } = require('../dataHandler');
 
 program
   .description('List all your aha moments.')
@@ -15,7 +16,7 @@ program
         },
         1: {
             alignment: 'left',
-            width    : 30,
+            width    : 40,
         },
         2: {
             alignment: 'left',
@@ -26,12 +27,27 @@ program
       },
     };
 
-    const data = [
-      [chalk.blue.bold('ID'), chalk.blue.bold('Title'), chalk.blue.bold('Status'), chalk.blue.bold('Created at')],
-      [1, 'The title', chalk.black.bgGreen.bold(' Done '), 'Yesterday'],
-      [999, 'The title', 'Pending', 'Yesterday'],
+    const data = readDataFile();
+    const rows = [
+      [
+        chalk.blue.bold('ID'),
+        chalk.blue.bold('Title'),
+        chalk.blue.bold('Status'),
+        chalk.blue.bold('Created at')
+      ],
     ];
 
-    const output = table(data, config);
+    if (data.rows) {
+      data.rows.forEach((row, index) => {
+        rows.push([
+          index+1,
+          row.title,
+          1,
+          1,
+        ]);
+      });
+    }
+
+    const output = table(rows, config);
     console.log(output);
   });
