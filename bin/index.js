@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const command = require('../cli');
+const command = require('../src');
 
 command();
