@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/p3yman/aha/issues"
   },
-  "homepage": "https://github.com/p3yman/aha#readme"
+  "homepage": "https://github.com/p3yman/aha#readme",
+  "dependencies": {
+    "jsonfile": "^6.0.1"
+  }
 }
