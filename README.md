@@ -1,5 +1,6 @@
 # 💡 Aha!
 
+A simple CLI tool to manage your awesome aha moments!
 
 ## TODO
 - [x] list
