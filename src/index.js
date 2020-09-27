@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const program = require('commander');
+const package = require('../package.json');
 
-program.version('0.1.0');
+program.version(package.version);
 
 // Import commands
 require('./commands/list');
