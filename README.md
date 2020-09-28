@@ -2,6 +2,8 @@
 
 `aha` is a simple CLI tool to save your awesome aha moments right where you live!
 
+![carbon](https://user-images.githubusercontent.com/2673262/94447107-1e5ab680-01b2-11eb-846d-3a1f95b80aee.png)
+
 ## Installation
 You can install it globaly from npm:
 ```shell
