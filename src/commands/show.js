@@ -3,7 +3,7 @@ const program = require('commander');
 const chalk = require('chalk');
 const dayjs = require('dayjs');
 const { table, getBorderCharacters } = require('table');
-const { showError, statusLabel } = require('../utils');
+const { showError, statusLabel, showEmptyMessage } = require('../utils');
 const { readDataFile } = require('../dataHandler');
 
 program
@@ -18,7 +18,7 @@ program
     const data = readDataFile();
 
     if (!data.rows.length) {
-      console.log( '\n   ' + chalk.black.bgYellow(' You don\'t have any aha moments for now. You can add one using ' + chalk.bgGreen(' aha add "title" ') + ' command.') + '\n');
+      showEmptyMessage();
       return;
     }
 
