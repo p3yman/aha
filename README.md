@@ -8,7 +8,7 @@ A simple CLI tool to manage your awesome aha moments!
 - [x] show
 - [ ] export
 - [ ] import
-- [ ] remove
+- [x] remove
 - [ ] clear
 - [ ] edit
 - [ ] add-note

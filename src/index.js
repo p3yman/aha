@@ -9,6 +9,7 @@ require('./commands/list');
 require('./commands/add');
 require('./commands/show');
 require('./commands/remove');
+require('./commands/clear');
 
 // Parse Args
 program.parse(process.argv);
