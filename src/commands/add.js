@@ -1,36 +1,71 @@
 #!/usr/bin/env node
 const program = require('commander');
+const { prompt } = require('inquirer');
 const chalk = require('chalk');
 const { showError, showSuccess, showHelpNote } = require('../utils');
 const { readDataFile, writeDataFile } = require('../dataHandler');
 
+const addItem = (data, item) => {
+  data.lastId = data.lastId + 1 || 1;
+  item.id = data.lastId;
+  item.createdAt = new Date();
+  data.rows.push(item);
+
+  writeDataFile(data);
+
+  showSuccess('Your aha moment has been successfully saved.');
+  showHelpNote('You can use `aha list` to see all your aha moments.');
+  console.log();
+}
+
 program
   .description('Add a new aha moment.')
   .command('add')
-  .option('-s, --status <status>', 'Set status. Acceptable values: pending (default), done, cancelled')
   .action((options) => {
-    if (!options.args || !options.args[0]) {
-      showError('Please provide a title.');
+    const data = readDataFile();
+
+    // Handle quick add
+    if (options.args[0]) {
+      addItem(data, {
+        title: options.args[0],
+        status: 'pending',
+      });
       return;
     }
     
-    const data = readDataFile();
+    const questions = [
+      {
+        type: 'input',
+        message: 'Title:',
+        name: 'title',
+        validate: value => (value.length ? true : 'Please enter a title.'),
+      },
+      {
+        type: 'list',
+        message: 'Status:',
+        name: 'status',
+        choices: [
+          {
+            name: chalk.yellow('Pending'),
+            value: 'pending',
+          },
+          {
+            name: chalk.green('Done'),
+            value: 'done',
+          },
+          {
+            name: chalk.red('Cancelled'),
+            value: 'cancelled',
+          },
+        ],
+        default: 'pending',
+      }
+    ];
+    
 
-    if (options.status && !['done', 'cancelled'].includes(options.status)) {
-      showError('Status parameter could be pending (default), done, or cancelled.');
-      return;
-    }
-
-    data.lastId = data.lastId + 1 || 1;
-    data.rows.push({
-      id: data.lastId,
-      title: options.args[0],
-      status: options.status || 'pending',
-      createdAt: new Date(),
+    // Ask question
+    prompt(questions).then((answers) => {
+      addItem(data, answers);
     });
-    writeDataFile(data);
-
-    showSuccess('Your aha moment has been successfully saved.');
-    showHelpNote('You can use `aha list` to see all your aha moments.');
-    console.log();
+    
   });
