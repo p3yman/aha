@@ -9,7 +9,7 @@ A simple CLI tool to manage your awesome aha moments!
 - [ ] export
 - [ ] import
 - [x] remove
-- [ ] clear
+- [x] clear
 - [ ] edit
 - [ ] add-note
 - [ ] remove-note
