@@ -8,7 +8,9 @@ const { readDataFile, writeDataFile } = require('../dataHandler');
 const addItem = (data, item) => {
   data.lastId = data.lastId + 1 || 1;
   item.id = data.lastId;
-  item.createdAt = new Date();
+  const date = new Date();
+  item.createdAt = date;
+  item.updatedAt = date;
   data.rows.push(item);
 
   writeDataFile(data);
