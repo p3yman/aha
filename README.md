@@ -64,6 +64,11 @@ To clear all the saved moments you can use `aha clear`.  Be careful that this co
 ![Screen Shot 2020-09-28 at 17 32 11](https://user-images.githubusercontent.com/2673262/94445798-8d371000-01b0-11eb-9b1d-b48b8af2f07d.png)
 
 
+### Contributing
+
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
+
+
 ## License
 
 [MIT License](https://mit-license.org/) © [Peyman Eskandari](https://github.com/p3yman/)
@@ -73,11 +78,11 @@ To clear all the saved moments you can use `aha clear`.  Be careful that this co
 - [x] list
 - [x] add
 - [x] show
-- [ ] export
-- [ ] import
 - [x] remove
 - [x] clear
-- [ ] edit
+- [x] edit
 - [ ] add-note
 - [ ] remove-note
 - [ ] clear-notes
+- [ ] export
+- [ ] import
