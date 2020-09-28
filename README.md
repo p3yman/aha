@@ -28,6 +28,7 @@ Or you can just run `aha add` and create a new aha moment by answering some ques
 
 ### List
 To see a list of saved moments, use `aha list` command.
+
 ![Screen Shot 2020-09-28 at 17 17 48](https://user-images.githubusercontent.com/2673262/94444023-8b6c4d00-01ae-11eb-8d3a-606e9b288442.png)
 
 ### Remove
@@ -45,6 +46,27 @@ Or you can just run `aha remove` and choose from available moments.
 ![Screen Shot 2020-09-28 at 17 23 10](https://user-images.githubusercontent.com/2673262/94444719-4a286d00-01af-11eb-9196-6335e2e08acf.png)
 
 In both ways, you should confirm the delete action. Default is no.
+
+### Edit
+You can edit each moment. Just run the `aha edit`. Select the right moment and update it.
+
+![Screen Shot 2020-09-28 at 17 30 09](https://user-images.githubusercontent.com/2673262/94445575-43e6c080-01b0-11eb-92d1-a8e2faa6084f.png)
+
+If you know the ID you can make the process faster:
+```bash
+$ aha edit 24
+```
+Then you can change the title and the status.
+
+### Clear
+To clear all the saved moments you can use `aha clear`.  Be careful that this command is not undoable. Just run the command, confirm deleting and it's done.
+
+![Screen Shot 2020-09-28 at 17 32 11](https://user-images.githubusercontent.com/2673262/94445798-8d371000-01b0-11eb-9b1d-b48b8af2f07d.png)
+
+
+## License
+
+[MIT License](https://mit-license.org/) © [Peyman Eskandari](https://github.com/p3yman/)
 
 
 ## TODO
