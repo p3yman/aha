@@ -66,9 +66,8 @@ program
     const questions = [
       {
         type: 'input',
-        message: 'New title:',
+        message: 'New title: (Leave empty to skip)',
         name: 'title',
-        validate: value => (value.length ? true : 'Please enter a title.'),
       },
       {
         type: 'list',
@@ -109,7 +108,9 @@ program
       }
 
       const index = data.rows.findIndex(el => el.id === item.id)
-      data.rows[index].title = answers.title;
+      if (answers.title) {
+        data.rows[index].title = answers.title;
+      }
       data.rows[index].status = answers.status;
       data.rows[index].updatedAt = new Date();
       writeDataFile(data);
