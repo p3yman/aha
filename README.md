@@ -22,8 +22,9 @@ You can use this quick create way:
 $ aha add "What a great idea!"
 ```
 
-Or you can just run `aha add` and create a new aha moment by answering some questions.
+Or you can just run `aha add` and create a new aha moment by answering some questions. Just enter a title and select a status and you are good to go.
 
+![Screen Shot 2020-09-28 at 17 04 39](https://user-images.githubusercontent.com/2673262/94443120-7a6f0c00-01ad-11eb-8acb-068e1a967249.png)
 
 ## TODO
 - [x] list
