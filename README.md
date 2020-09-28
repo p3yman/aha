@@ -20,7 +20,7 @@ You have a small CRUD actions with this tool.
 Using add you can create new aha moment in the local database.
 
 You can use this quick create way:
-```shell
+```bash
 $ aha add "What a great idea!"
 ```
 
@@ -32,6 +32,17 @@ Or you can just run `aha add` and create a new aha moment by answering some ques
 To see a list of saved moments, use `aha list` command.
 
 ![Screen Shot 2020-09-28 at 17 17 48](https://user-images.githubusercontent.com/2673262/94444023-8b6c4d00-01ae-11eb-8d3a-606e9b288442.png)
+
+### Show
+You can see the details of an aha moment using `aha show` command:
+```bash
+$ aha show 17
+```
+
+Which `17` is the moment's ID.
+
+![Screen Shot 2020-09-28 at 17 49 27](https://user-images.githubusercontent.com/2673262/94447992-19e2cd80-01b3-11eb-9245-d8d5eea65ac2.png)
+
 
 ### Remove
 To remove an aha moment, use `aha remove` command.
@@ -65,8 +76,9 @@ To clear all the saved moments you can use `aha clear`.  Be careful that this co
 
 ![Screen Shot 2020-09-28 at 17 32 11](https://user-images.githubusercontent.com/2673262/94445798-8d371000-01b0-11eb-9b1d-b48b8af2f07d.png)
 
+---
 
-### Contributing
+## Contributing
 
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
 
