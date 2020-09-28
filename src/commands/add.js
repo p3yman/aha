@@ -10,6 +10,11 @@ program
   .command('add')
   .option('-s, --status <status>', 'Set status. Acceptable values: pending (default), done, cancelled')
   .action((options) => {
+    if (!options.args || !options.args[0]) {
+      showError('Please provide a title.');
+      return;
+    }
+    
     const data = readDataFile();
 
     if (options.status && !['done', 'cancelled'].includes(options.status)) {

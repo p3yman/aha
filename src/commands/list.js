@@ -2,12 +2,12 @@
 const program = require('commander');
 const chalk = require('chalk');
 const { table } = require('table');
-const { showHelpNote, statusLabel } = require('../utils');
+const { showHelpNote, statusLabel, showEmptyMessage } = require('../utils');
 const { readDataFile } = require('../dataHandler');
 
 program
   .description('List all your aha moments.')
-  .command('list')
+  .command('list', { isDefault: true })
   .action((options) => {
     const config = {
       columns: {
@@ -29,7 +29,7 @@ program
     const data = readDataFile();
 
     if (!data.rows.length) {
-      console.log( '\n   ' + chalk.black.bgYellow(' You don\'t have any aha moments for now. You can add one using ' + chalk.bgGreen(' aha add "title" ') + ' command.') + '\n');
+      showEmptyMessage();
       return;
     }
 
@@ -45,7 +45,7 @@ program
       data.rows.forEach((row) => {
         rows.push([
           row.id,
-          chalk.yellow.bold(row.title),
+          chalk.bold(row.title),
           statusLabel(row.status),
         ]);
       });
