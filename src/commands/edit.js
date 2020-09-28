@@ -94,7 +94,7 @@ program
     if (!item) {
       questions.unshift({
         type: 'list',
-        message: 'Selecte the item to remove:',
+        message: 'Selecte the item to edit:',
         name: 'item',
         choices: data.rows.map(el => makeItem(el)),
         pageSize: 10,

@@ -55,7 +55,7 @@ program
     console.log(output);
 
     showHelpNote('To see the details, you could use `aha show 23` which 23 is the ID of the aha moment.');
-    showHelpNote('To change the status, you could use `aha status 24 "done"`.');
+    showHelpNote('To change the status, you could use `aha edit 17`.');
     showHelpNote('To delete a aha moment, use `aha remove 48`.');
     console.log();
 
