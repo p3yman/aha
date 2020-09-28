@@ -8,6 +8,7 @@ program.version(package.version);
 require('./commands/list');
 require('./commands/add');
 require('./commands/show');
+require('./commands/remove');
 
 // Parse Args
 program.parse(process.argv);

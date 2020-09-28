@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const program = require('commander');
 const chalk = require('chalk');
-const { table } = require('table');
 const { showError, showSuccess, showHelpNote } = require('../utils');
 const { readDataFile, writeDataFile } = require('../dataHandler');
 
