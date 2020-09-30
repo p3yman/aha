@@ -1,6 +1,7 @@
 const jsonfile = require('jsonfile');
+const abs = require("abs");
 
-const DATA_FILE = 'data.json';
+const DATA_FILE = abs('~/.aha-moment-data.json');
 
 function readDataFile() {
   let data = { rows: [] };

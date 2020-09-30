@@ -1,6 +1,6 @@
 {
   "name": "aha-moment",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Save your aha moments and ideas right where you live!",
   "main": "index.js",
   "bin": {
